@@ -1,0 +1,94 @@
+.header{
+    height: 75px;
+    display:flex;
+    align-items: center;
+    background-color:aquamarine;
+    position: sticky;
+    top:0;
+    z-index: 100;
+    width: 100%;
+}
+
+.header__logo{
+    width:100px ;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-left: auto;
+    
+}
+.header__search{
+    padding-right: 10px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.header__searchInput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 24px   0px  0px 24px;
+}
+
+.header__searchIcon{
+    padding: 5px;
+    height: 22px !important;
+    background-color: black;
+    color: white;
+    border-radius: 0px   24px  24px 0px;
+
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__option{
+display: flex;
+flex-direction: column;
+margin-left: 20px;
+margin-right: 20px;
+color: black;
+}
+
+.header__optionLineOne{
+    font-size: 12px;
+    
+}
+
+.header__optionLineTwo{
+    font-weight: 600;
+}
+
+.header__optionBasket{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+.header__optionLineThree{
+    font-weight: 600;
+}
+
+.header__optionWish{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header__wishCount{
+    margin-left: 10px;
+    margin-right: 20px;
+
+}
+
