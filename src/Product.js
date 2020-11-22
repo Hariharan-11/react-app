@@ -5,10 +5,10 @@ import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
 
 
-function Product({id,title,image,price,rating}) {
-    const [{basket}, dispatch]= useStateValue();
+function Product({ id, title, image, price, rating }) {
+    const [{ basket }, dispatch] = useStateValue();
 
-    const addToBasket= () =>{
+    const addToBasket = () => {
         dispatch({
             type: "ADD_TO_BASKET",
             item: {
@@ -20,34 +20,34 @@ function Product({id,title,image,price,rating}) {
             },
         })
     }
-    
- return (
-        
-        <div className="product">
-        
-            <div className="product__info">
-            <Link to='/productview'>
-            <p>{title}</p>
-            </Link>
-            <p className="product__price">
-                <small>₹</small>
-                <strong>{price}</strong>
-            </p>
-            
-            <div className="product__rating">
-            {Array(rating).fill().map((_, i) =>(
-                <p>⭐</p>  
-            ))}
-              
-              </div>
-            </div>
-            <img src={image} alt="product"/>
-        <button onClick={addToBasket}>Add to cart</button>
 
-        
+    return (
+
+        <div className="product">
+
+            <div className="product__info">
+                <Link to={`/productview/${id}`}>
+                    <p>{title}</p>
+                </Link>
+                <p className="product__price">
+                    <small>₹</small>
+                    <strong>{price}</strong>
+                </p>
+
+                <div className="product__rating">
+                    {Array(rating).fill().map((_, i) => (
+                        <p>⭐</p>
+                    ))}
+
+                </div>
+            </div>
+            <img src={image} alt="product" />
+            <button onClick={addToBasket}>Add to cart</button>
+
+
         </div>
-        
-        
+
+
     )
 }
 

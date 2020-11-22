@@ -1,30 +1,30 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
-import {auth} from "./firebase";
+import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Productview from './Productview'
 
 
 function App() {
-  const [{}, dispatch] =useStateValue();
+  const [{ }, dispatch] = useStateValue();
 
   useEffect(() => {
-    auth.onAuthStateChanged(authUser =>{
+    auth.onAuthStateChanged(authUser => {
       console.log('THE USER IS >>>> ', authUser)
-      if (authUser){
-      
+      if (authUser) {
+
         dispatch(
           {
             type: 'SET_USER',
             user: authUser
           });
-        }
-      else{
+      }
+      else {
 
         dispatch(
           {
@@ -34,37 +34,37 @@ function App() {
       }
     })
     return () => {
-      
+
     }
   }, [])
-  
+
 
   return (
     <Router>
       <div className="app">
-      
+
 
         <Switch>
-        <Route path="/login">
-          <Login/>
-        </Route>
-
-        <Route path="/checkout">
-        <Header />
-          <Checkout/>
+          <Route path="/login">
+            <Login />
           </Route>
 
-          <Route path="/productview">
-          <Header/>
-            <Productview/>
+          <Route path="/checkout">
+            <Header />
+            <Checkout />
+          </Route>
+
+          <Route path="/productview/:id">
+            <Header />
+            <Productview />
           </Route>
 
           <Route path="/">
-          <Header />
+            <Header />
             <Home />
           </Route>
 
-          
+
 
         </Switch>
       </div>

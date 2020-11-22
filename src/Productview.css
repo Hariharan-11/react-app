@@ -88,7 +88,8 @@ ul{
     }
 }
 
-.ModelViewer{
-    width: 500px;
-    height: 500px;
-}
+
+
+model-viewer#reveal {
+    --poster-color: transparent;
+  }
