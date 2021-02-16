@@ -2,7 +2,7 @@
     height: 75px;
     display:flex;
     align-items: center;
-    background-color:aquamarine;
+    background-image:linear-gradient(to right, rgb(137, 221, 255), rgb(135, 250, 212));
     position: sticky;
     top:0;
     z-index: 100;

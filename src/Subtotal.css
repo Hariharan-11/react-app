@@ -14,16 +14,14 @@
     
     padding-top: 4px;
     padding-bottom: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: aquamarine;
+    padding-left: 18px;
+    padding-right: 18px;
     border: 1px solid;
-    border-color:   rgb(98, 196, 163) rgb(98, 196, 163) rgb(98, 196, 163);
+    border-color:   #ffafbd #ffafbd  #ffc3a0;
     border-radius: 3px;
     margin-top: 10px;
     color: black;
-
-    background-image: linear-gradient(-180deg,  rgb(130, 255, 213) 0%,  rgb(109, 216, 180));
+    background-image: linear-gradient(to right, #ffafbd,  #ffc3a0);
 }
 
 .subtotal__gift{
@@ -33,3 +31,4 @@
 .subtotal__gift > input{
     margin-right: 5px;
 }
+

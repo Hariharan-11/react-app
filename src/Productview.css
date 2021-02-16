@@ -37,14 +37,12 @@
     padding-bottom: 4px;
     padding-left: 18px;
     padding-right: 18px;
-    background-color: aquamarine;
     border: 1px solid;
-    border-color:   rgb(98, 196, 163) rgb(98, 196, 163) rgb(98, 196, 163);
+    border-color:   #ffafbd #ffafbd  #ffc3a0;
     border-radius: 3px;
     margin-top: 10px;
     color: black;
-
-    background-image: linear-gradient(-180deg,  rgb(130, 255, 213) 0%,  rgb(109, 216, 180));
+    background-image: linear-gradient(to right, #ffafbd,  #ffc3a0);
 	
 }
 
@@ -93,3 +91,34 @@ ul{
 model-viewer#reveal {
     --poster-color: transparent;
   }
+
+  model-viewer > #ar-prompt {
+    position: absolute;
+    left: 50%;
+    bottom: 175px;
+    animation: elongate 2s infinite ease-in-out alternate;
+    display: none;
+  }
+
+  model-viewer[ar-status="session-started"] > #ar-prompt {
+    display: block;
+  }
+
+  model-viewer > #ar-prompt > img {
+    animation: circle 4s linear infinite;
+  }
+
+
+  .AR__button{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid;
+    border-color:   #ffafbd #ffafbd  #ffc3a0;
+    border-radius: 3px;
+    margin-top: 10px;
+    color: black;
+    background-image: linear-gradient(to right, #ffafbd,  #ffc3a0);
+  }
+

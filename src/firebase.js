@@ -3,6 +3,7 @@ import firebase from "firebase/app";
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import "firebase/storage"
 
 const firebaseConfig = {
   apiKey: "AIzaSyDsn1L4tsjKPWLU5Cz19V_jkRhm8x300Bg",
@@ -19,5 +20,5 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore
 const auth = firebase.auth();
-
-export { db, auth };
+var storage = firebase.storage();
+export { db, auth , storage};
